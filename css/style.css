@@ -308,7 +308,7 @@ a {
 .dp-wrapper img  {
 	width: 100%;
 	display:block; /*Without it, white space may occur below img because it is treated as inline i.e. text */
-	margin-top: -110px;  /* cropping image upper part */
+	margin-top: -15%;  /* cropping image upper part, using % because image height changes on variable width, so in case of px unit large part might effect*/
 }
 @media (min-width:768px) {
 	.dp-wrapper {
