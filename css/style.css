@@ -305,3 +305,33 @@ a {
 	height:auto;
 	overflow:visible;
 }
+
+.dp-wrapper img  {
+	width: 100%;
+	display:block; /*Without it, white space may occur below img because it is treated as inline i.e. text */
+	margin-top: -110px;  /* cropping image upper part */
+}
+@media (min-width:768px) {
+	.dp-wrapper {
+		position: relative;
+		height: 100%;      /*Parent column height i.e. parent sibling height because its parent don't has its own*/
+		overflow: hidden;
+		background-color: grey;
+    	}	
+	.dp-wrapper img {
+		position: absolute;
+		margin-top: 0px;
+		left: 50%; top: 100%; 
+		transform: translate(-50%, -100%);
+		width: auto; height: auto;
+		max-height:100%; min-height:100%;
+		min-width: 100%;
+	}
+}
+@media (min-width:992px) {
+	.dp-wrapper img  {
+		max-height: inherit;
+		max-width: 100%;
+	}
+}
+
